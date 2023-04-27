@@ -12,7 +12,7 @@
 
 1. 下载镜像
 ```shell
-docker pull novicezk/midjourney-proxy:1.0
+docker pull novicezk/midjourney-proxy:latest
 ```
 2. 启动容器，并设置参数
 ```shell
@@ -23,7 +23,7 @@ docker run -d --name midjourney-proxy \
  -e mj.discord.user-token=xxx \
  -e mj.discord.bot-token=xxx \
  --restart=always \
- novicezk/midjourney-proxy:1.0
+ novicezk/midjourney-proxy:latest
 ```
 
 ## 注意事项
