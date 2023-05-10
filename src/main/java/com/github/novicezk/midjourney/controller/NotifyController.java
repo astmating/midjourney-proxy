@@ -16,6 +16,7 @@ import java.util.List;
 public class NotifyController {
   private final NotifyService notifyService;
 	private final NotifyService notifyService;
+	private final TaskHelper taskHelper;
 
 	@GetMapping("/list")
 	public void list() {
