@@ -15,16 +15,10 @@ import java.util.List;
 @RequiredArgsConstructor
 public class NotifyController {
   private final NotifyService notifyService;
-	private final TaskHelper taskHelper;
+	private final NotifyService notifyService;
 
 	@GetMapping("/list")
-	public List<Task> listTask() {
-		return this.taskHelper.listTask();
+	public void list() {
+		notifyService.notifyTaskChange();
 	}
-
-	@GetMapping("/{id}/fetch")
-	public Task getTask(@PathVariable String id) {
-		return this.taskHelper.findById(id);
-	}
-
 }
