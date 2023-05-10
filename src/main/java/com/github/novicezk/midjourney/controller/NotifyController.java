@@ -16,10 +16,9 @@ import java.util.List;
 public class NotifyController {
   private final NotifyService notifyService;
 	private final NotifyService notifyService;
-	private final TaskHelper taskHelper;
 
-	@GetMapping("/list")
-	public void list() {
-		notifyService.notifyTaskChange();
+	@PostMapping("/list")
+	public void list(@RequestBody Task task) {
+		notifyService.notifyTaskChange(task);
 	}
 }
